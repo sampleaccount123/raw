@@ -18,4 +18,7 @@ app.post('/login', urlencodedParser, (req, res) => {
   res.send(`${username} ${password}`)
 })
 
-app.listen(3000, () => console.log('Run running on port 3000!'))
+app.get('/hello', (req, res) => res.send('hello'))
+
+
+app.listen(4000, () => console.log('Run running on port 3000!'))
