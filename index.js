@@ -8,7 +8,9 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.use(express.static(__dirname + '/views'));
 
-app.get('/', (req, res) => res.render('index'))
+app.get('/', (req, res) => { 
+  res.render('index')
+})
 
 app.post('/login', urlencodedParser, (req, res) => {
   var username = req.body.username,
